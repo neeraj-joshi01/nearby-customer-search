@@ -41,6 +41,7 @@ Install Bundle
 Print list of nearby customers
 
 `ruby executor.rb`
+
 With Dynamic arguments with the order as `Radius, Latitude and Longitude`
 
 `ruby executor.rb 100 53.339428 -6.257664`
