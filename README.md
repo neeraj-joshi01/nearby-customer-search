@@ -1,4 +1,5 @@
 **About**
+
 Nearby Customers Search using Greater Circle Distance formula which returns a list of users sorted by user_id. 
 The output of the app can be found in output.txt at the top-level folder.
 
