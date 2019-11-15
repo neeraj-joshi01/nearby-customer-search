@@ -2,6 +2,8 @@ require 'pry'
 require File.dirname(__FILE__) + '/app.rb'
 
 class Executor
+
+  # Prints all the customers in a given radius from the center coordinates
   def self.print_results
     constants = Constants.instance
     search_service = SearchService.new({

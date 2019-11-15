@@ -1,51 +1,51 @@
-**About**
+# Nearby Customers Search #
 
-Nearby Customers Search using Greater Circle Distance formula which returns a list of users sorted by user_id. 
+Uses Greater Circle Distance formula to return a list of users sorted by user_id. 
 The output of the app can be found in output.txt at the top-level folder.
 
-**Setup & Installation**
+## Setup & Installation ##
 
 Below are the steps to run the code on different environments:
 
 All commands should be run from the root folder of the App
 
-**Docker Environment**
+### Docker Environment ###
 
-Build Docker container
+**Build Docker container**
 
 `docker build . -t nearby-customers-search`
 
-Print list of nearby customers
+**Print list of nearby customers**
 
-`docker run nearby-customer-search`
+`docker run nearby-customers-search`
 
-Run Unit Tests
+**Run Unit Tests**
 
-`docker run nearby-customer-search test`
+`docker run nearby-customers-search test`
 
 
-**Ruby Environment**
+### Ruby Environment ###
 
-Install RVM
+**Install RVM**
 
-**https://rvm.io/rvm/install**
+`https://rvm.io/rvm/install`
 
-Download Ruby 2.4.1
+**Download Ruby 2.4.1**
 
-**rvm install ruby-2.4.1**
+`rvm install ruby-2.4.1`
 
-Install Bundle
+**Install Bundle**
 
-**bundle install**
+`bundle install`
 
-Print list of nearby customers
+**Print list of nearby customers**
 
 `ruby executor.rb`
 
-With Dynamic arguments with the order as `Radius, Latitude and Longitude`
+**Dynamic arguments with the order as `Radius, Latitude and Longitude`**
 
 `ruby executor.rb 100 53.339428 -6.257664`
 
-Run Unit Tests
+**Run Unit Tests**
 
 `rspec`
