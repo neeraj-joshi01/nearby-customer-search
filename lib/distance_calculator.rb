@@ -1,9 +1,9 @@
 class DistanceCalculator
 
-  def self.process(customer, center_latitude, center_longitude)
+  def self.process(point_1, point_2)
     # Get latitude and longitude
-    lat1, lon1 = customer.latitude, customer.longitude
-    lat2, lon2 = center_latitude, center_longitude
+    lat1, lon1 = point_1[0], point_1[1]
+    lat2, lon2 = point_2[0], point_2[1]
 
     # Calculate radial arcs for latitude and longitude
     dLat = (lat2 - lat1) * Math::PI / 180
@@ -15,6 +15,6 @@ class DistanceCalculator
         Math.cos(lat2 * Math::PI / 180) *
         Math.sin(dLon / 2) * Math.sin(dLon / 2)
     c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
-    d = 6371 * c
+    (6371 * c).round(1)
   end
 end

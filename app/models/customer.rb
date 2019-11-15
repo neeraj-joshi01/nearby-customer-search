@@ -5,8 +5,9 @@ class Customer
   attr_accessor :latitude, :longitude, :name, :user_id
   
   def initialize(params)
+    params = Hash[params.map{ |k, v| [k.to_s, v] }]
     if !valid?(params)
-      raise "Invalid Customer Record"
+      raise Exception, "Invalid Customer Record"
     end
     @latitude = params["latitude"].to_f
     @longitude = params["longitude"].to_f

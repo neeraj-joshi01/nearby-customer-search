@@ -15,7 +15,10 @@ class SearchService
     customer_records = FileParser.process(file_url)
     customer_records.each do |record|
       customer = Customer.new(record)
-      distance = DistanceCalculator.process(customer, @search_center_latitude, @search_center_longitude)
+      distance = DistanceCalculator.process(
+        [customer.latitude, customer.longitude], 
+        [@search_center_latitude, @search_center_longitude]
+      )
       @result_heap.add(customer) if distance < @search_radius
     end
   end
