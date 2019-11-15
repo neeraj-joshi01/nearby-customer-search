@@ -1,6 +1,9 @@
 class DistanceCalculator
 
   def self.process(point_1, point_2)
+
+    raise "Invalid points" if !point_1.any? || !point_2.any?
+
     # Get latitude and longitude
     lat1, lon1 = point_1[0], point_1[1]
     lat2, lon2 = point_2[0], point_2[1]

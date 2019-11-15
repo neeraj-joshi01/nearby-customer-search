@@ -24,9 +24,11 @@ class SearchService
   end
 
   def nearby_customers
+    customer_records = []
     while @result_heap.size > 0
-      puts @result_heap.pop.as_json
+      customer_records << @result_heap.pop.as_json
     end
+    customer_records
   end
 
 end
